@@ -1,0 +1,20 @@
+# Node.js dependencies
+node_modules/
+
+# WebdriverIO logs
+logs/
+*.log
+
+# Test reports
+reports/
+allure-results/
+allure-report/
+
+# IDE files
+.idea/
+.vscode/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+node_modules

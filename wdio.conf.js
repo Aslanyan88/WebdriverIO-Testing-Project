@@ -5,6 +5,14 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+    
+    // Import and initialize Chai
+    before: function() {
+        const chai = require('chai');
+        global.assert = chai.assert;
+        global.should = chai.should();
+        global.expect = chai.expect;
+    },
     //
     // ==================
     // Specify Test Files

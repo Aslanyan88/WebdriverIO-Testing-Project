@@ -16,12 +16,10 @@ exports.config = {
     // that will be expanded). The test for each spec file will be run in a separate
     // worker process. In order to have a group of spec files run in the same worker
     // process simply enclose them in an array within the specs array.
-    //
-    // The path of the spec files will be resolved relative from the directory of
+    //    // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
-    //
     specs: [
-        './test/specs/**/*.js'
+        './tests/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [

@@ -1,10 +1,12 @@
 const { expect, browser } = require('@wdio/globals');
-const FormPage = require('../pageobjects/form.page');
+const FormPage = require('../business/form.page');
+const TestDataUtils = require('../core/testdata.utils');
 
 describe('Form Submission Feature', () => {
     it('should submit a form with valid data', async () => {
+        const testEmail = TestDataUtils.generateRandomEmail();
         await FormPage.open();
-        await FormPage.fillForm('test@example.com');
+        await FormPage.fillForm(testEmail);
         const emailFieldExists = await FormPage.inputEmail.isExisting();
         await FormPage.submitForm();
         await browser.pause(500);
